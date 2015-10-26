@@ -501,6 +501,11 @@ class ActionBuilder(BHRH):
         self._action_string = self.format_action(self._action_dict)
 
     def save(self, filename=""):
+        """
+        save action string to code file
+        :param filename:
+        :return:
+        """
         if not filename:
             filename = self._action_dict["name"] + ".py"
             filename = re.sub(r'[\\/:"*?<>|]+', "", filename)
