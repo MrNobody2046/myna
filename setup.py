@@ -9,7 +9,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='myna',
-    version='0.1.0',
+    version='0.1.0.dev1',
 
     description='A simple api-test framework',
     long_description=long_description,
@@ -34,7 +34,7 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'myna=myna:commands:main',
+            'myna=myna.commands:main',
         ],
     },
 )
