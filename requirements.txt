@@ -1,3 +1,0 @@
-jsonschema
-json_schema_generator
-colorama

@@ -30,7 +30,7 @@ setup(
     keywords='reqests testing ',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
 
-    install_requires=['requests'],
+    install_requires=['requests', 'colorama', 'json_schema_generator', 'jsonschema'],
 
     entry_points={
         'console_scripts': [

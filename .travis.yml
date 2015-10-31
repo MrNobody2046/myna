@@ -1,14 +1,17 @@
-# this file is *not* meant to cover or endorse the use of travis, but rather to
-# help confirm pull requests to this project.
-
 language: python
-
 env:
-  - TOXENV=py26
-  - TOXENV=py27
-  - TOXENV=py33
-  - TOXENV=py34
-
+- TOXENV=py26
+- TOXENV=py27
+- TOXENV=py33
+- TOXENV=py34
 install: pip install tox
-
 script: tox
+deploy:
+  provider: pypi
+  user: sphy
+  password:
+    secure: vdI4FKYY17kDy2TcgggFLHZHqZmtCNahWaZL1T+TqHIQPL81AXMPpSLdB+CKcOXYVMb/oIGBL5cuqGVLdeMzNd9+k95X7mms8dDE9W9Ak7iOm9p8aE1+V2cWKUm/zNnJ6IKEUbNn65BEcBWSzUBijGMQIUzWMNYcTM6M8ucISTMlqizEJP+dKRKd4pDksPNjoDCTC5Or0RWTId+MDonKzxGX7anMvUNeO4Uz798O8LeuGOkIURYm2IkdcRYS8WcS05dSQLA/9cGwo37amkUTyxY66q30xyf4kU3HBOjcfpk6u7aY1c84/VaNMivBoj+eP7yU39h8CEsuoNizl0RMF2yRWSW6GeDDemGX8qkqLn/2+fdiarT+oHdtAoZ9AiT4RFeU3Ohc2Cl1kPKIIYdTXAgSrI7msWgf3qb6Zyw2ML0ihEvlcm8NvS5WTpKz4X5Y3qfHRYjw5G9C0kJO847Q154EcYr/ScYTuDMU6ijEhWhw85uPQ7Oz0cucfK+C1MQAYfMUMUTUNlgu31scKnyauLedJZZHifwBNzJf3/ytTa/LAqDeZo+XHDo3zUdK2AjFlDBg3ah3vhcJbRAvFMgHZQU79A7hSG9h+4VErIEyzrNwXtovWSCjK/MA3p456KUekI0i0rcOxm2ZmnKJx/w1CqojWKj/WOJ1MWOp+Ta4IME=
+  on:
+    repo: philoprove/myna
+    tags: false
+    branch: release
